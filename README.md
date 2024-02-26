@@ -34,13 +34,15 @@ For Windows:
 
 Open the Windows terminal and use the following command to install Python 3.10 via [Chocolatey](https://chocolatey.org/), a package manager for Windows:
 
-```bash
+```
 choco install python --version=3.10.0
+```
 
 For macOS:
 Use Homebrew to install Python 3.10 on macOS by running the following command in the terminal:
-
+```
 brew install python@3.10
+```
 
 2. **Virtual Environment**:
    - Create a virtual environment to isolate project dependencies.
