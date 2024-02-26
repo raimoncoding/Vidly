@@ -46,36 +46,44 @@ Ensure that the path to the user base's binary directory is on your `PATH` envir
 ### Setting Up the Virtual Environment
 
 Navigate to the project's root directory and run:
-
+```
 pipenv install
+```
 
 This command creates a virtual environment for the project and installs the dependencies defined in the `Pipfile`.
 
 ### Activating the Virtual Environment
 
 To activate the virtual environment, use:
-
+```
 pipenv shell
+```
 
 This command spawns a shell within the virtual environment. Any Python or pip commands will now use the versions in the virtual environment instead of the global ones.
 
 ### Installing Django and Required Libraries
 
 With the virtual environment active, you can install Django and any other necessary libraries. While specific library versions may vary, you can generally install Django with:
-
+```
 pipenv install django
+```
+
 
 To install other required libraries, including `whitenoise` for static file management, refer to the `Pipfile` in the project's root directory for a list of dependencies. For example, to install `whitenoise`:
-
+```
 pipenv install whitenoise
+```
+
 
 Repeat this process for any other libraries listed in the `Pipfile`.
 
 ### Starting the Project
 
 After installing Django and other dependencies, you can start the Django development server with:
-
+```
 python manage.py runserver
+```
+
 
 Visit `http://127.0.0.1:8000/` in your web browser to view the project.
 
