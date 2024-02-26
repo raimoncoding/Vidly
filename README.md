@@ -37,8 +37,17 @@ This command will create a local copy of the repository on your machine.
 
 ### Project Configuration
 
-1. **Database Setup**: Use Django's ORM to define models and execute migrations, setting up SQLite as the project database.
-2. **Admin and User Interface**: Configure the Django admin for content management and customize the front page for a user-friendly browsing experience.
+**Database Setup**: Use Django's ORM to define models and execute migrations, setting up SQLite as the project database.
+
+1. **Download the Database File**: Download the `db.sqlite3` file from the provided web address.
+ `https://sqlitebrowser.org/dl/`
+
+3. **Running Migrations**: To make sure your database schema is up to date, run:
+
+`python manage.py makemigrations`
+`python manage.py migrate`
+
+4. **Admin and User Interface**: Configure the Django admin for content management and customize the front page for a user-friendly browsing experience.
 
 ## Development Workflow
 
