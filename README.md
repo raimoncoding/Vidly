@@ -1,3 +1,5 @@
+![Decorative Cassette Tape](videotape.jpg)
+
 # Vidly Project Documentation
 
 ## Project Overview
