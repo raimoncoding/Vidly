@@ -117,46 +117,6 @@ The Django Admin interface is a powerful built-in tool that allows administrator
 
 ### Generating a Secret Key
 
-The `SECRET_KEY` in Django is vital for security. Follow these steps to generate and set a new secret key:
-
-1. Open a terminal and run Python interactive shell:
-    ```bash
-    python
-    ```
-
-2. Use the following commands to generate a new secret key:
-    ```python
-    import secrets
-    print(secrets.token_urlsafe())
-    ```
-
-3. Copy the generated key and replace the `SECRET_KEY` in your `settings.py`:
-    ```python
-    SECRET_KEY = 'paste_your_generated_key_here'
-    ```
-
-Ensure this key is kept confidential to maintain your application's security.
-
-### Admin Access
-
-To manage your application's data through the Django admin, create a superuser account:
-
-```bash
-python manage.py createsuperuser
-Follow the prompts to set up the superuser credentials. Access the admin interface at http://127.0.0.1:8000/admin/ using these credentials.
-
-Remember to set DEBUG to False in production settings and use strong, unique passwords for all administrator accounts.
-
-
-- **Content Management**: Within the admin interface, administrators can effortlessly manage the content of movies, props, genres, and their availability. The intuitive interface supports operations such as adding new entries, editing existing ones, and deleting entries that are no longer needed.
-
-Remember, accessing the admin interface in a production environment should always be done over a secure connection (HTTPS) to protect sensitive information.
-
-
-### Customer Front Page
-
-- **Movie and Prop Catalog**: Customers can explore a detailed catalog of movies and props, complete with descriptions, images, genres, and availability information.
-- **Search and Filtering**: Advanced search and filtering capabilities enable customers to easily find content that matches their interests.
 
 ## Generating a Django Secret Key
 
@@ -198,13 +158,38 @@ The `SECRET_KEY` in a Django project plays a crucial role in security and crypto
     chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
     print(get_random_string(50, chars))
     ```
-4. Copy the generated key.
-5. Update `settings.py` with the new `SECRET_KEY`.
+4. Copy the generated key and replace the `SECRET_KEY` in your `settings.py`:
+    ```python
+    SECRET_KEY = 'paste_your_generated_key_here'
+    ```
 
 ### Important Notes
 
 - Never expose your `SECRET_KEY` in public repositories or to unauthorized users.
 - For production, consider setting the `SECRET_KEY` through an environment variable to avoid including it directly in your source code.
+
+Ensure this key is kept confidential to maintain your application's security.
+
+### Admin Access
+
+To manage your application's data through the Django admin, create a superuser account:
+
+```bash
+python manage.py createsuperuser
+Follow the prompts to set up the superuser credentials. Access the admin interface at http://127.0.0.1:8000/admin/ using these credentials.
+
+Remember to set DEBUG to False in production settings and use strong, unique passwords for all administrator accounts.
+
+
+- **Content Management**: Within the admin interface, administrators can effortlessly manage the content of movies, props, genres, and their availability. The intuitive interface supports operations such as adding new entries, editing existing ones, and deleting entries that are no longer needed.
+
+Remember, accessing the admin interface in a production environment should always be done over a secure connection (HTTPS) to protect sensitive information.
+
+
+### Customer Front Page
+
+- **Movie and Prop Catalog**: Customers can explore a detailed catalog of movies and props, complete with descriptions, images, genres, and availability information.
+- **Search and Filtering**: Advanced search and filtering capabilities enable customers to easily find content that matches their interests.
 
 
 ## Conclusion
