@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<dl>
+    <dt>Title</dt>
+    <dd class="detail-content">{{ prop.title }}</dd>
+    <dt>Genre</dt>
+    <dd class="detail-content">{{  prop.taste }}</dd>
+    <dt>Stock</dt>
+    <dd class="detail-content">{{ prop.number_in_stock }}</dd>
+</dl>
+{% endblock %}

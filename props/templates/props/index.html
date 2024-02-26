@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Taste</th>
+      <th>Stock</th>
+      <th>Daily Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for prop in props %}
+    <tr>
+      <td>
+        <a href="{% url 'props:detail' prop.id %}">{{ prop.title }}</a>
+      </td>
+      <td>{{ prop.taste }}</td>
+      <td>{{ prop.number_in_stock }}</td>
+      <td>{{ prop.daily_rate }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
