@@ -8,6 +8,22 @@ Vidly is a Django-based web application designed for browsing and renting movies
 
 ## Setup and Installation
 
+## Cloning the Repository
+
+To clone the repository and start working on the project locally, follow these steps:
+
+1. Open your terminal or command prompt.
+2. Navigate to the directory where you want to clone the repository.
+3. Run the following command:
+
+git clone https://github.com/raimoncoding/Vidly.git
+
+This command will create a local copy of the repository on your machine.
+
+## Scaling Images in README
+
+In case you want to
+
 ### Initial Setup
 
 1. **Python 3.10 Installation**: Ensure Python 3.10 is installed to take advantage of the latest features and maintain compatibility with the project requirements.
