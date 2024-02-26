@@ -16,7 +16,7 @@ To clone the repository and start working on the project locally, follow these s
 2. Navigate to the directory where you want to clone the repository.
 3. Run the following command:
 
-git clone https://github.com/raimoncoding/Vidly.git
+`git clone https://github.com/raimoncoding/Vidly.git`
 
 This command will create a local copy of the repository on your machine.
 
