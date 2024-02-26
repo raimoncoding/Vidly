@@ -62,6 +62,43 @@ Vidly is a Django-based web application designed for browsing and renting movies
 - **Importance**: The `SECRET_KEY` is crucial for maintaining the security of Django projects.
 - **Generation**: Use Django's `get_random_secret_key()` or a custom Python script to generate a secure secret key.
 
+### Generating a New Secret Key
+
+#### Method 1: Using Django's `get_random_secret_key()`
+
+1. Open a terminal or command prompt.
+2. Activate your project's virtual environment.
+3. Enter the Django shell by running:
+    ```
+    python manage.py shell
+    ```
+4. In the Django shell, generate a new secret key:
+    ```python
+    from django.core.management.utils import get_random_secret_key
+    print(get_random_secret_key())
+    ```
+5. Copy the generated key.
+6. Replace the `SECRET_KEY` in `settings.py` with the new key:
+    ```python
+    SECRET_KEY = 'newly_generated_secret_key_here'
+    ```
+
+#### Method 2: Using Python Directly
+
+1. Open a terminal or command prompt.
+2. Run Python by typing `python` and hitting Enter.
+3. Generate a secret key:
+    ```python
+    from django.utils.crypto import get_random_string
+    chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
+    print(get_random_string(50, chars))
+    ```
+4. Copy the generated key and replace the `SECRET_KEY` in your `settings.py`:
+    ```python
+    SECRET_KEY = 'paste_your_generated_key_here'
+    ```
+
+
 ### Admin Security
 
 - Create a superuser with `python manage.py createsuperuser`.
