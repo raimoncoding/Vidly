@@ -87,10 +87,71 @@ python manage.py runserver
 
 Visit `http://127.0.0.1:8000/` in your web browser to view the project.
 
+## API Endpoints
+
+The project provides RESTful API endpoints for accessing movies and props data. These endpoints can be used to retrieve JSON-formatted information about the movies and props available in the application.
+
+### Movies API
+
+To see a list of movies, visit the following URL:
+- [http://127.0.0.1:8000/api/movies/](http://127.0.0.1:8000/api/movies/)
+
+### Props API
+
+To see a list of props, visit the following URL:
+- [http://127.0.0.1:8000/api/props/](http://127.0.0.1:8000/api/props/)
+
+These endpoints are designed for easy integration with frontend applications or for use by third-party services.
+
+Please note: The URLs provided are for accessing the API in a local development environment. Replace `127.0.0.1:8000` with the actual domain or IP address where your project is hosted in a production environment.
+
+
 ### Admin Webpage
 
-- **User Authentication**: Secure authentication mechanisms allow administrators to log in and access the management dashboard.
-- **Content Management**: The admin page provides comprehensive tools for managing movies, props, genres, and availability, all through an intuitive interface.
+The Django Admin interface is a powerful built-in tool that allows administrators to manage the content of the website. Before accessing the admin interface, a superuser account must be created, and specific password validations can be enforced for added security.
+
+- **User Authentication**: The admin interface is protected by secure authentication mechanisms. To access the management dashboard, users must log in with a superuser account. This account has full access to create, read, update, and delete operations within the admin interface.
+
+- **Creating a Superuser Account**: To create a superuser account, navigate to your project's root directory in the terminal and run the following command:
+
+    ```bash
+    python manage.py createsuperuser
+    ```
+
+    Follow the prompts to set a username, email address, and password for the superuser account. Once created, you can access the admin interface by visiting `http://127.0.0.1:8000/admin/` and logging in with the superuser credentials.
+
+- **Password Requirements**: For added security, Django allows you to enforce password validation rules for user accounts, including superuser accounts. These rules can be defined in your project's `settings.py` file using the `AUTH_PASSWORD_VALIDATORS` setting. An example configuration might look like this:
+
+    ```python
+    AUTH_PASSWORD_VALIDATORS = [
+        {
+            'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+            'OPTIONS': {
+                'user_attributes': ('username', 'email', 'first_name', 'last_name'),
+                'max_similarity': 0.7,
+            }
+        },
+        {
+            'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+            'OPTIONS': {
+                'min_length': 12,
+            }
+        },
+        {
+            'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        },
+        {
+            'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        },
+    ]
+    ```
+
+    This setup enforces passwords to have a minimum length, not be too similar to the user's personal information, not be common passwords, and not be entirely numeric. Adjust these settings as necessary to meet your security requirements.
+
+- **Content Management**: Within the admin interface, administrators can effortlessly manage the content of movies, props, genres, and their availability. The intuitive interface supports operations such as adding new entries, editing existing ones, and deleting entries that are no longer needed.
+
+Remember, accessing the admin interface in a production environment should always be done over a secure connection (HTTPS) to protect sensitive information.
+
 
 ### Customer Front Page
 
