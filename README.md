@@ -1,4 +1,4 @@
-<img src="videotape.jpg" alt="Decorative Cassette Tape" width="100"/>
+<img src="videotape.jpg" alt="Decorative Cassette Tape" width="200"/>
 
 # Vidly Project Documentation
 
