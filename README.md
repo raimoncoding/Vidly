@@ -39,6 +39,7 @@ choco install python --version=3.10.0
 ```
 
 For macOS:
+
 Use Homebrew to install Python 3.10 on macOS by running the following command in the terminal:
 ```
 brew install python@3.10
