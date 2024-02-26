@@ -97,6 +97,55 @@ Visit `http://127.0.0.1:8000/` in your web browser to view the project.
 - **Movie and Prop Catalog**: Customers can explore a detailed catalog of movies and props, complete with descriptions, images, genres, and availability information.
 - **Search and Filtering**: Advanced search and filtering capabilities enable customers to easily find content that matches their interests.
 
+## Generating a Django Secret Key
+
+The `SECRET_KEY` in a Django project plays a crucial role in security and cryptography. It's used to provide cryptographic signing, and its value is used to salt hashes for various security mechanisms, including CSRF tokens and session IDs. Therefore, it's vital to keep this key secret and unique per project, especially in production environments.
+
+### Why the SECRET_KEY is Important
+
+- **Cryptography**: The `SECRET_KEY` is used throughout Django's security features, such as signing session cookies, CSRF tokens, and passwords.
+- **Security**: A unique and unpredictable `SECRET_KEY` makes various attacks, such as guessing session cookies or CSRF tokens, much harder.
+
+### Generating a New Secret Key
+
+#### Method 1: Using Django's `get_random_secret_key()`
+
+1. Open a terminal or command prompt.
+2. Activate your project's virtual environment.
+3. Enter the Django shell by running:
+    ```
+    python manage.py shell
+    ```
+4. In the Django shell, generate a new secret key:
+    ```python
+    from django.core.management.utils import get_random_secret_key
+    print(get_random_secret_key())
+    ```
+5. Copy the generated key.
+6. Replace the `SECRET_KEY` in `settings.py` with the new key:
+    ```python
+    SECRET_KEY = 'newly_generated_secret_key_here'
+    ```
+
+#### Method 2: Using Python Directly
+
+1. Open a terminal or command prompt.
+2. Run Python by typing `python` and hitting Enter.
+3. Generate a secret key:
+    ```python
+    from django.utils.crypto import get_random_string
+    chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
+    print(get_random_string(50, chars))
+    ```
+4. Copy the generated key.
+5. Update `settings.py` with the new `SECRET_KEY`.
+
+### Important Notes
+
+- Never expose your `SECRET_KEY` in public repositories or to unauthorized users.
+- For production, consider setting the `SECRET_KEY` through an environment variable to avoid including it directly in your source code.
+
+
 ## Conclusion
 
 As a student project, Vidly serves as a practical demonstration of applying modern web development techniques in a real-world application. This project showcases the potential of Django and Python in creating feature-rich web applications, while also serving as an invaluable learning tool for web development students. The choice of SQLite for database management underscores the project's commitment to simplicity and efficiency, making it an ideal learning platform for those new to web development.
