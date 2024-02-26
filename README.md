@@ -30,7 +30,7 @@ In case you want to
 
 ### Installing Python 3.10
 
-#### For Windows:
+For Windows:
 
 Open the Windows terminal and use the following command to install Python 3.10 via [Chocolatey](https://chocolatey.org/), a package manager for Windows:
 
