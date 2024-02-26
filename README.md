@@ -94,12 +94,12 @@ The project provides RESTful API endpoints for accessing movies and props data. 
 ### Movies API
 
 To see a list of movies, visit the following URL:
-- http://127.0.0.1:8000/api/movies/
+- `http://127.0.0.1:8000/api/movies/`
 
 ### Props API
 
 To see a list of props, visit the following URL:
-- http://127.0.0.1:8000/api/props/
+- `http://127.0.0.1:8000/api/props/`
 
 These endpoints are designed for easy integration with frontend applications or for use by third-party services.
 
