@@ -1,0 +1,258 @@
+body{
+  background-color: gray;
+  text-align: center;
+
+}
+/* Make the navigation bar sticky */
+.navbar {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; /* Set the top position for the sticky navbar */
+  background: grey; /* Optional: Background color for the navbar */
+  z-index: 1000; /* Ensure the navbar stays on top of other elements */
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2); /* Optional: Add a subtle shadow for depth */
+}
+
+/* Style for the home link */
+.navbar-brand {
+  display: inline-block;
+  text-decoration: none;
+  color: #333; /* Change as needed */
+  padding: 10px 15px; /* Spacing around the text */
+}
+
+/* styles.css */
+.home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: yellow; /* Bootstrap primary button color */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.home-button:hover, .home-button:focus {
+  background-color: lightblue; /* Darker shade on hover/focus */
+  color: #ffeb3b; /* Yellow text on hover/focus */
+  text-decoration: none; /* Remove underline from link */
+  outline: none; /* Remove focus outline */
+}
+
+.header {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700; /* Assuming you want the title to be bold */
+  font-size: 60px; /* Adjust the size as needed */
+  color: lightblue; /* Or any color you prefer */
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300; /* A lighter weight for the subtitle */
+  font-size: 30px; /* Adjust the size as needed */
+  color: yellow; /* Or any color you prefer */
+  margin-bottom: 50px; /* Adjust spacing as needed */
+}
+
+
+.spacing{
+  margin-bottom: 25px;
+}
+.button {
+  background: #99cff0;
+  background-image: -webkit-linear-gradient(top, #FFF7BC, #CDDEFF);
+  background-image: -moz-linear-gradient(top, #FFF7BC, #CDDEFF);
+  background-image: -ms-linear-gradient(top, #FFF7BC, #CDDEFF);
+  background-image: -o-linear-gradient(top, #FFF7BC, #CDDEFF);
+  background-image: linear-gradient(to bottom, #FFF7BC, #CDDEFF);
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-bottom: 35px;
+  -webkit-transition: border-color 0.3s, box-shadow 0.3s;
+  -moz-transition: border-color 0.3s, box-shadow 0.3s;
+  -ms-transition: border-color 0.3s, box-shadow 0.3s;
+  -o-transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.button:hover, .button:focus {
+  background: #3cfc73;
+  background-image: -webkit-linear-gradient(top, #97DBAE, #E3FCBF);
+  background-image: -moz-linear-gradient(top, #97DBAE, #E3FCBF);
+  background-image: -ms-linear-gradient(top, #97DBAE, #E3FCBF);
+  background-image: -o-linear-gradient(top, #97DBAE, #E3FCBF);
+  background-image: linear-gradient(to bottom, #97DBAE, #E3FCBF);
+  text-decoration: none;
+  outline: none;
+  border-color: #CDDEFF;
+  box-shadow: 0 0 0 4px rgba(205, 222, 255, 1)
+}
+
+/* Responsive Background Image */
+.video-related-background {
+  background-image: url('/static/img/videotape.jpg');
+  background-size: cover; /* Cover ensures the background image fully covers the element */
+  background-position: center; /* Centers the background image */
+  height: 300px; /* Adjust based on your design needs */
+  width: 100%; /* Ensures width is responsive and covers the width of its container */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-bordered {
+  border: 1px solid #ddd;
+}
+
+.table-hover tbody tr:hover {
+  background: #3cfc73;
+  background-image: -webkit-linear-gradient(top, #97DBAE, #E3FCBF);
+  background-image: -moz-linear-gradient(top, #97DBAE, #E3FCBF);
+  background-image: -ms-linear-gradient(top, #97DBAE, #E3FCBF);
+  background-image: -o-linear-gradient(top, #97DBAE, #E3FCBF);
+  background-image: linear-gradient(to bottom, #97DBAE, #E3FCBF);}
+
+th {
+  background-color: #4CAF50;
+  color: yellow;
+  padding: 15px;
+  text-align: left;
+}
+
+td {
+  padding: 15px;
+  text-align: left;
+}
+
+dl {
+  width: 50%;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+dt {
+  font-weight: bold;
+  color: #333;
+}
+
+dd {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+/* Style for table headers */
+.table thead th {
+  background: #99cff0;
+  background-image: -webkit-linear-gradient(top, #FFF7BC, #CDDEFF);
+  background-image: -moz-linear-gradient(top, #FFF7BC, #CDDEFF);
+  background-image: -ms-linear-gradient(top, #FFF7BC, #CDDEFF);
+  background-image: -o-linear-gradient(top, #FFF7BC, #CDDEFF);
+  background-image: linear-gradient(to bottom, #FFF7BC, #CDDEFF);
+  color: white;
+  padding: 15px;
+  text-align: left;
+}
+
+.table thead th:hover {
+  background: #3cfc73;
+  background-image: -webkit-linear-gradient(top, #97DBAE, #E3FCBF);
+  background-image: -moz-linear-gradient(top, #97DBAE, #E3FCBF);
+  background-image: -ms-linear-gradient(top, #97DBAE, #E3FCBF);
+  background-image: -o-linear-gradient(top, #97DBAE, #E3FCBF);
+  background-image: linear-gradient(to bottom, #97DBAE, #E3FCBF);
+}
+
+/* Style for table data cells */
+.table tbody td {
+  padding: 15px;
+  text-align: left;
+  color: #333; /* Dark text for better readability */
+}
+
+/* Style for links within the table */
+.table tbody td a {
+  color: lightblue; /* Example color for links */
+  text-decoration: none;
+}
+
+.table tbody td a:hover {
+  color: white; /* Change text color to yellow on hover */
+}
+
+
+/* Style for the term (dt) */
+dl dt {
+  font-weight: bold;
+  color: yellow;
+  margin-bottom: 5px; /* Add space between the term and the definition */
+}
+
+/* Style for the definition (dd) */
+dl dd {
+  margin-bottom: 15px;
+  color: lightblue;
+}
+
+/* Style for the definition list container */
+dl {
+  background: black; /* Light grey background */
+  border: 1px solid lightblue; /* Light grey border */
+  padding: 20px; /* Spacing inside the container */
+  border-radius: 8px; /* Rounded corners */
+  max-width: 600px; /* Maximum width of the container */
+  margin: 20px auto; /* Centering the container with automatic side margins */
+}
+
+/* Style for the term (dt) */
+dt {
+  font-weight: bold; /* Bold font for terms */
+  color: yellow; /* Dark grey color for text */
+  margin-top: 10px; /* Space above each term */
+}
+
+/* Style for the description (dd) */
+dd {
+  margin-left: 20px; /* Indent descriptions for better readability */
+  margin-bottom: 10px; /* Space below each description */
+  color: lightblue; /* Medium grey color for text */
+}
+
+.detail-content {
+  margin-left: 0; /* Adjust this value as needed */
+}
+
+
+@media (max-width: 768px) {
+  .video-related-background {
+    height: 200px; /* Adjust height for smaller screens to maintain aspect ratio */
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .button {
+    font-size: 16px;
+    padding: 8px 15px 8px 15px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  .header {
+    font-size: 40px;
+  }
+}
+
