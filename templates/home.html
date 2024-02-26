@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <a class="button" href="{% url 'movies:index' %}">Movies</a>
+  <a class="button" href="{% url 'props:index' %}">Props</a>
+{% endblock %}
