@@ -94,12 +94,12 @@ The project provides RESTful API endpoints for accessing movies and props data. 
 ### Movies API
 
 To see a list of movies, visit the following URL:
-- [http://127.0.0.1:8000/api/movies/](http://127.0.0.1:8000/api/movies/)
+- [http://127.0.0.1:8000/api/movies/]
 
 ### Props API
 
 To see a list of props, visit the following URL:
-- [http://127.0.0.1:8000/api/props/](http://127.0.0.1:8000/api/props/)
+- [http://127.0.0.1:8000/api/props/]
 
 These endpoints are designed for easy integration with frontend applications or for use by third-party services.
 
@@ -112,41 +112,41 @@ The Django Admin interface is a powerful built-in tool that allows administrator
 
 - **User Authentication**: The admin interface is protected by secure authentication mechanisms. To access the management dashboard, users must log in with a superuser account. This account has full access to create, read, update, and delete operations within the admin interface.
 
-- **Creating a Superuser Account**: To create a superuser account, navigate to your project's root directory in the terminal and run the following command:
-
-    ```bash
-    python manage.py createsuperuser
-    ```
-
-    Follow the prompts to set a username, email address, and password for the superuser account. Once created, you can access the admin interface by visiting `http://127.0.0.1:8000/admin/` and logging in with the superuser credentials.
 
 - **Password Requirements**: For added security, Django allows you to enforce password validation rules for user accounts, including superuser accounts. These rules can be defined in your project's `settings.py` file using the `AUTH_PASSWORD_VALIDATORS` setting. An example configuration might look like this:
 
-    ```python
-    AUTH_PASSWORD_VALIDATORS = [
-        {
-            'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-            'OPTIONS': {
-                'user_attributes': ('username', 'email', 'first_name', 'last_name'),
-                'max_similarity': 0.7,
-            }
-        },
-        {
-            'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-            'OPTIONS': {
-                'min_length': 12,
-            }
-        },
-        {
-            'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-        },
-        {
-            'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-        },
-    ]
+### Generating a Secret Key
+
+The `SECRET_KEY` in Django is vital for security. Follow these steps to generate and set a new secret key:
+
+1. Open a terminal and run Python interactive shell:
+    ```bash
+    python
     ```
 
-    This setup enforces passwords to have a minimum length, not be too similar to the user's personal information, not be common passwords, and not be entirely numeric. Adjust these settings as necessary to meet your security requirements.
+2. Use the following commands to generate a new secret key:
+    ```python
+    import secrets
+    print(secrets.token_urlsafe())
+    ```
+
+3. Copy the generated key and replace the `SECRET_KEY` in your `settings.py`:
+    ```python
+    SECRET_KEY = 'paste_your_generated_key_here'
+    ```
+
+Ensure this key is kept confidential to maintain your application's security.
+
+### Admin Access
+
+To manage your application's data through the Django admin, create a superuser account:
+
+```bash
+python manage.py createsuperuser
+Follow the prompts to set up the superuser credentials. Access the admin interface at http://127.0.0.1:8000/admin/ using these credentials.
+
+Remember to set DEBUG to False in production settings and use strong, unique passwords for all administrator accounts.
+
 
 - **Content Management**: Within the admin interface, administrators can effortlessly manage the content of movies, props, genres, and their availability. The intuitive interface supports operations such as adding new entries, editing existing ones, and deleting entries that are no longer needed.
 
