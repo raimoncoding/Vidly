@@ -1,5 +1,9 @@
 <img src="videotape.jpg" alt="Decorative Cassette Tape" width="200"/>
 
+This project is inspired by this programming course by Mosh Hamedani:
+
+`https://codewithmosh.com/p/python-programming-course-beginners`
+
 # Vidly Project Documentation
 
 ## Project Overview
