@@ -1,4 +1,4 @@
-![Decorative Cassette Tape](videotape.jpg)
+<img src="videotape.jpg" alt="Decorative Cassette Tape" width="100"/>
 
 # Vidly Project Documentation
 
