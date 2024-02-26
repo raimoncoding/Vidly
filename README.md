@@ -20,9 +20,6 @@ git clone https://github.com/raimoncoding/Vidly.git
 
 This command will create a local copy of the repository on your machine.
 
-## Scaling Images in README
-
-In case you want to
 
 ### Initial Setup
 
